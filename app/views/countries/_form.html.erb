@@ -13,23 +13,23 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.select :name, Country::ALLOWED_COUNTRIES %>
   </div>
   <div class="field">
     <%= f.label :population %><br />
-    <%= f.text_field :population %>
+    <%= f.number_field :population %>
   </div>
   <div class="field">
     <%= f.label :median_age %><br />
-    <%= f.text_field :median_age %>
+    <%= f.number_field :median_age %>
   </div>
   <div class="field">
     <%= f.label :life_expectancy %><br />
-    <%= f.text_field :life_expectancy %>
+    <%= f.number_field:life_expectancy %>
   </div>
   <div class="field">
     <%= f.label :gdp %><br />
-    <%= f.check_box :gdp %>
+    <%= f.number_field :gdp %>
   </div>
   <div class="field">
     <%= f.label :mandatory_military_service %><br />
