@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  population: 
+  median_age: 1.5
+  life_expectancy: 1.5
+  mandatory_military_service: false
+
+two:
+  name: MyString
+  population: 
+  median_age: 1.5
+  life_expectancy: 1.5
+  mandatory_military_service: false
