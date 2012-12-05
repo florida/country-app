@@ -6,6 +6,7 @@
     <th>Population</th>
     <th>Median age</th>
     <th>Life expectancy</th>
+    <th>GDP</th>
     <th>Mandatory military service</th>
     <th></th>
     <th></th>
@@ -18,6 +19,7 @@
     <td><%= country.population %></td>
     <td><%= country.median_age %></td>
     <td><%= country.life_expectancy %></td>
+    <td><%= number_to_currency country.gdp %></td>
     <td><%= country.mandatory_military_service %></td>
     <td><%= link_to 'Show', country %></td>
     <td><%= link_to 'Edit', edit_country_path(country) %></td>
