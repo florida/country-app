@@ -21,7 +21,7 @@ class WorldController < ApplicationController
 
   def search_results
   	@keyword = params[:keyword]
-    @country = Country.where("nameLIKE ?", "%#{@keyword}%")
+    @country = Country.where("name LIKE ?", "%#{@keyword}%")
     if @country.empty?
     	flash[:error] = "Country doesn't exist"
     	redirect_to search_path
