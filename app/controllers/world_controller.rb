@@ -8,7 +8,7 @@ class WorldController < ApplicationController
   end
 
   def by_age
-  	@country = Country.order('median_age')
+  	@country = Country.where('median_age > 30').order('median_age')
   end
 
   def by_required_service
