@@ -1,22 +1,5 @@
 %p#notice= notice
-%p
-  %b Name:
-  = @country.name
-%p
-  %b Population:
-  = @country.population
-%p
-  %b Median age:
-  = @country.median_age
-%p
-  %b Life expectancy:
-  = @country.life_expectancy
-%p
-  %b GDP:
-  = number_to_currency @country.gdp
-%p
-  %b Mandatory military service:
-  = @country.mandatory_military_service
+= render @country
 = link_to 'Edit', edit_country_path(@country)
 |
 \#{link_to 'Back', countries_path}
