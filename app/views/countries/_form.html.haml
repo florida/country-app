@@ -1,0 +1,35 @@
+= form_for(@country) do |f|
+  - if @country.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@country.errors.count, "error")
+        prohibited this country from being saved:
+      %ul
+        - @country.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    %br/
+    = f.select :name, Country::ALLOWED_COUNTRIES
+  .field
+    = f.label :population
+    %br/
+    = f.number_field :population
+  .field
+    = f.label :median_age
+    %br/
+    = f.text_field :median_age
+  .field
+    = f.label :life_expectancy
+    %br/
+    = f.text_field :life_expectancy
+  .field
+    = f.label :gdp
+    %br/
+    = f.text_field :gdp
+  .field
+    = f.label :mandatory_military_service
+    %br/
+    = f.check_box :mandatory_military_service
+  .actions
+    = f.submit

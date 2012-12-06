@@ -1,0 +1,25 @@
+%h1 Listing countries
+%table
+  %tr
+    %th Name
+    %th Population
+    %th Median age
+    %th Life expectancy
+    %th GDP
+    %th Mandatory military service
+    %th
+    %th
+    %th
+  - @countries.each do |country|
+    %tr
+      %td= country.name
+      %td= country.population
+      %td= country.median_age
+      %td= country.life_expectancy
+      %td= number_to_currency country.gdp
+      %td= country.mandatory_military_service
+      %td= link_to 'Show', country
+      %td= link_to 'Edit', edit_country_path(country)
+      %td= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Country', new_country_path
