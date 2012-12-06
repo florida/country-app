@@ -7,7 +7,8 @@ CountryApp::Application.routes.draw do
   match 'by_population' => 'world#by_population', :as => 'by_population', :via => :get
   match 'by_age' => 'world#by_age', :as => 'by_age', :via => :get
   match 'by_required_service' => 'world#by_required_service', :as => 'by_required_service', :via => :get
-
+  match 'search' => 'world#search', :as => 'search', :via => :get
+  match 'results' => 'world#search_results', :as => 'results', :via => :post
   
 
   # The priority is based upon order of creation:
