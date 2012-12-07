@@ -1,6 +1,12 @@
 %h1 Search Customers
+- if (session[:recent_search])
+  you searched for
+  = session[:recent_search]
+- else
+  %h2 this is your first time searching
 
 = form_tag results_path do
   = label_tag "Search"
   = text_field_tag :keyword
+  = select_tag :mandatory_military_service, options_for_select(@search_options)
   = submit_tag "Search"
